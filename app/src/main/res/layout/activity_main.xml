@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@drawable/edittext_rounded"
+                        android:hint="Поиск"
+                        android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/bell"
+
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+   <androidx.core.widget.NestedScrollView
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginRight="20dp"
+           android:layout_marginLeft="20dp">
+
+           <LinearLayout
+               android:id="@+id/ll_payment"
+               android:layout_width="match_parent"
+               android:layout_height="180dp"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/linear_rounded"
+               android:orientation="vertical"
+               app:elevation="10dp">
+
+               <FrameLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <LinearLayout
+                       android:layout_marginTop="40dp"
+                       android:gravity="center"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="0"
+                           android:textSize="28sp"
+                           android:textColor="@color/white"
+                           android:textStyle="bold"
+                           />
+                       <ImageView
+                           android:layout_width="28dp"
+                           android:layout_height="21dp"
+                           android:src="@drawable/ic_baseline_currency_ruble_24"
+                           android:scaleType="centerCrop"
+                           />
+
+                   </LinearLayout>
+                   <LinearLayout
+                       android:gravity="bottom|center"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_marginBottom="30dp">
+
+                       <Button
+                           android:layout_width="300dp"
+                           android:layout_height="wrap_content"
+                           android:background="@drawable/button_rounded"
+                           app:backgroundTint="@null"
+                           android:text="Пополнить кошелек"
+                           android:textColor="@color/black"
+                           />
+
+                   </LinearLayout>
+
+               </FrameLayout>
+
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/ll_warning"
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:layout_marginTop="35dp"
+               android:background="@drawable/linear_rounded_two"
+               >
+               <FrameLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <LinearLayout
+                       android:padding="10dp"
+                       android:orientation="vertical"
+                       android:layout_marginTop="20dp"
+                       android:layout_marginLeft="20dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <LinearLayout
+                           android:gravity="center_vertical"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/ic_baseline_warning_24"/>
+
+                           <TextView
+                               android:layout_marginLeft="5dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Ограничения в вашем кошельке."
+                               android:textColor="@color/white"
+                               />
+
+                       </LinearLayout>
+                       <LinearLayout
+                           android:layout_marginLeft="30dp"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Введите свои данные!"
+                               android:textColor="@color/white"
+                               />
+
+                       </LinearLayout>
+
+
+                   </LinearLayout>
+
+               </FrameLayout>
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="Платежи  и переводы"
+                   android:textColor="@color/black"
+                   android:textSize="22sp"
+                   android:textStyle="bold"
+                   />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Все"
+                   android:textSize="14sp"
+                   android:textColor="@color/purple_700"
+                   />
+
+           </LinearLayout>
+           <LinearLayout
+               android:id="@+id/ll_recycler"
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/recyclerview"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+               </androidx.recyclerview.widget.RecyclerView>
+
+           </LinearLayout>
+           <LinearLayout
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="120dp">
+
+               <androidx.viewpager.widget.ViewPager
+                   android:id="@+id/viewpager"
+                   android:clipToPadding="false"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+               </androidx.viewpager.widget.ViewPager>
+
+           </LinearLayout>
+
+           <TextView
+               android:layout_marginTop="30dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Полезное"
+               android:textColor="@color/black"
+               android:textSize="22sp"
+               android:textStyle="bold"
+               />
+
+           <LinearLayout
+               android:orientation="vertical"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="20dp"
+               android:padding="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:gravity="center_vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:src="@drawable/payment"
+                       />
+                   <TextView
+                       android:gravity="center"
+                       android:layout_weight="1"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="Счета к оплате"
+                       android:textColor="@color/black"
+                       android:textSize="17sp"
+                       />
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_baseline_navigate_next_24"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginTop="15dp"
+                   android:gravity="center_vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:src="@drawable/ic_baseline_location_on_24"
+                       />
+                   <TextView
+                       android:gravity="center"
+                       android:layout_weight="1"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="Карта терминалов"
+                       android:textColor="@color/black"
+                       android:textSize="17sp"
+                       />
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_baseline_navigate_next_24"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginTop="15dp"
+                   android:gravity="center_vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:src="@drawable/exchange"
+                       />
+                   <TextView
+                       android:gravity="center"
+                       android:layout_weight="1"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:text="Курсы валют"
+                       android:textColor="@color/black"
+                       android:textSize="17sp"
+                       />
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_baseline_navigate_next_24"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
